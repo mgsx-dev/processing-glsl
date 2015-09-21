@@ -1,7 +1,7 @@
 /**
 To see iridescence in action, let's animate it with noise.
 
-Noise generation is not covered in this chapter, see [Noise chapter]({% post_url 2015-07-20-Noise %}) for more details.
+Noise generation is not covered in this chapter, see noise chapter for more details.
 */
 #define PROCESSING_COLOR_SHADER
 
@@ -167,10 +167,10 @@ void main( void ) {
 /**
 We compute an animated FM noise (2 compound noise signals)
 */
-  float vtime = time * 0.05f;
-  float freq = 2.0f;
+  float vtime = time * 0.05;
+  float freq = 2.0;
   float noiseFM = cnoise(vec3(position, vtime) * freq * 3.0);
-  float noise = cnoise(vec3(position, vtime + noiseFM) * freq) * 0.5f + 0.5f;
+  float noise = cnoise(vec3(position, vtime + noiseFM) * freq) * 0.5 + 0.5;
 
 /**
 Extract a gradient from that FM noise, we take just a thin band around mid noise value
