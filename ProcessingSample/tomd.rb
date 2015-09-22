@@ -134,7 +134,7 @@ module GLSLParser
 		lines << "---"
 
 		# markdown layout
-		lines << "## Explainations"
+		lines << "## Explanations"
 		lines << ""
 		lines += context.text
 		lines << ""
